@@ -9,10 +9,9 @@
     %th Chemical
 
     - @results['results'].each do |result|
-      - spill = Spill.criteria.id(result['id']).first
       %tr
-        %td= link_to spill['Facility Name'], spill
-        %td= "#{spill['City']}, #{spill['ST']}"
-        %td= spill['Chemical']
+        %td= link_to result['facility_name'], spill_path(result['id'])
+        %td= "#{result['city']}, #{result['state']}"
+        %td= result['chemical']
 
 %p
