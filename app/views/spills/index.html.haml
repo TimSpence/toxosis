@@ -3,17 +3,7 @@
 %table
   %tr
     %th Facility
-    %th
-    %th
-    %th
 
   - @spills.each do |spill|
     %tr
-      %td= spill['Facility Name']
-      %td= link_to 'Show', spill
-      %td= link_to 'Edit', edit_spill_path(spill)
-      %td= link_to 'Destroy', spill, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Spill', new_spill_path
+      %td= link_to spill['Facility Name'], spill

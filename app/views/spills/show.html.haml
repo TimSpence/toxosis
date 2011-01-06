@@ -1,6 +1,18 @@
-%p#notice= notice
+%h1 Spill Details
 
+%h2= @spill['Facility Name']
 
-= link_to 'Edit', edit_spill_path(@spill)
-\|
-= link_to 'Back', spills_path
+%p
+  Spilled
+  =@spill['On-site Release Total']
+  =@spill['Unit of Measure']
+  of
+  =@spill['Chemical']
+
+%address
+  =@spill['Street Address']
+  %br
+  ="#{@spill['City']}, #{@spill['ST']} #{@spill['ZIP']}"
+
+%p
+  = link_to 'Back', root_path
