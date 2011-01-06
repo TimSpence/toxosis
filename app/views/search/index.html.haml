@@ -13,11 +13,10 @@
       %th Chemical
 
       - @results['results'].each do |result|
-        - spill = Spill.criteria.id(result['docid']).first
         %tr
-          %td= link_to spill['Facility Name'], spill
-          %td= "#{spill['City']}, #{spill['ST']}"
-          %td= spill['Chemical']
+          %td= link_to result['facility_name'], "/spills/#{result['docid']}"
+          %td= "#{result['city']}, #{result['state']}"
+          %td= result['chemical']
   %p
     - if ! (params['start'].to_i < 11)
       %a{ :href => "/search?q=#{params['q']}&start=#{(params.fetch('start', 1).to_i-10).to_s}"} < Previous

@@ -3,6 +3,6 @@ class SearchController < ApplicationController
     # Call out to indextank api
     client = IndexTank::Client.new(ENV['INDEXTANK_API_URL'])
     index = client.indexes('idx')
-    @results = index.search(params['q'], :start => params.fetch('start' , 1))
+    @results = index.search(params['q'], :start => params.fetch('start' , 1), :fetch => 'facility_name,chemical,zip,city,state')
   end
 end
