@@ -9,3 +9,8 @@ mongoimport -d toxosis_development -c spills --type csv --file TRI_2009_CA_v09.c
 2) Or use a header file with munged headers. Don't forget to remove the header line.
 
 mongoimport -d toxosis_development -c spills --type csv --file toxic.csv --fieldFile ~/Desktop/header
+
+
+indextank original url to free uber account: http://:E5UyWDGCT2ZE4C@dvj9q.api.indextank.com
+
+
