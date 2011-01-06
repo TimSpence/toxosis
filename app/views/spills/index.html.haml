@@ -7,3 +7,7 @@
   - @spills.each do |spill|
     %tr
       %td= link_to spill['Facility Name'], spill
+
+%p
+  = will_paginate @spills
+  

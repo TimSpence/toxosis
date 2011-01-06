@@ -127,3 +127,4 @@ DEPENDENCIES
   rails (= 3.0.3)
   rails3-generators
   ruby_parser
+  will_paginate (~> 3.0.pre2)

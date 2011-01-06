@@ -2,7 +2,7 @@ class SpillsController < ApplicationController
   # GET /spills
   # GET /spills.xml
   def index
-    @spills = Spill.all
+    @spills = Spill.paginate(:page => params.fetch(:page, 1))
 
     respond_to do |format|
       format.html # index.html.erb

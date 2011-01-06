@@ -40,3 +40,4 @@ gem "rails3-generators", :group => :development
 gem "flutie"
 gem "hpricot"
 gem "ruby_parser"
+gem "will_paginate", "~> 3.0.pre2"
