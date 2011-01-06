@@ -1,0 +1,18 @@
+%h1 
+  Search Results for
+  = params['q'] 
+
+%table
+  %tr
+    %th Facility
+    %th Location
+    %th Chemical
+
+    - @results['results'].each do |result|
+      - spill = Spill.criteria.id(result['id']).first
+      %tr
+        %td= link_to spill['Facility Name'], spill
+        %td= "#{spill['City']}, #{spill['ST']}"
+        %td= spill['Chemical']
+
+%p
