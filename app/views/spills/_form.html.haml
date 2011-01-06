@@ -1,0 +1,10 @@
+= form_for @spill do |f|
+  -if @spill.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@spill.errors.count, "error")} prohibited this spill from being saved:"
+      %ul
+        - @spill.errors.full_messages.each do |msg|
+          %li= msg
+
+  .actions
+    = f.submit 'Save'

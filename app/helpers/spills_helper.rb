@@ -1,0 +1,2 @@
+module SpillsHelper
+end

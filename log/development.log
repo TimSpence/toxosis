@@ -1,0 +1,115 @@
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jan 05 15:57:23 -0800 2011
+
+ActionController::RoutingError (No route matches "/"):
+  
+
+Rendered /Users/chris/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/spills" for 127.0.0.1 at Wed Jan 05 15:57:27 -0800 2011
+  Processing by SpillsController#index as HTML
+toxosis_development['spills'].find({}, {})
+MONGODB cursor.refresh() for cursor 2071339124473535363
+MONGODB cursor.refresh() for cursor 2071339124473535363
+MONGODB cursor.refresh() for cursor 2071339124473535363
+MONGODB cursor.refresh() for cursor 2071339124473535363
+MONGODB cursor.refresh() for cursor 2071339124473535363
+MONGODB cursor.refresh() for cursor 2071339124473535363
+MONGODB cursor.refresh() for cursor 2071339124473535363
+MONGODB cursor.refresh() for cursor 2071339124473535363
+MONGODB cursor.refresh() for cursor 2071339124473535363
+Rendered spills/index.html.haml within layouts/application (11763.5ms)
+Completed 200 OK in 11773ms (Views: 11772.3ms)
+
+
+Started GET "/" for 192.168.2.135 at Wed Jan 05 15:57:47 -0800 2011
+
+ActionController::RoutingError (No route matches "/"):
+  
+
+Rendered /Users/chris/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/spills" for 127.0.0.1 at Wed Jan 05 15:57:57 -0800 2011
+  Processing by SpillsController#index as HTML
+toxosis_development['spills'].find({}, {})
+Rendered spills/index.html.haml within layouts/application (22.1ms)
+Completed   in 30ms
+
+ActionView::Template::Error (undefined method `facility_name' for #<Spill:0x105ad3c38>):
+    9: 
+    10:   - @spills.each do |spill|
+    11:     %tr
+    12:       %td= spill.facility_name
+    13:       %td= link_to 'Show', spill
+    14:       %td= link_to 'Edit', edit_spill_path(spill)
+    15:       %td= link_to 'Destroy', spill, :confirm => 'Are you sure?', :method => :delete
+  app/views/spills/index.html.haml:12:in `_app_views_spills_index_html_haml___107122081_2195664860_0'
+  app/views/spills/index.html.haml:10:in `_app_views_spills_index_html_haml___107122081_2195664860_0'
+  app/controllers/spills_controller.rb:7:in `index'
+
+Rendered /Users/chris/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/chris/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (117.4ms)
+Rendered /Users/chris/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (135.3ms)
+
+
+Started GET "/spills" for 192.168.2.135 at Wed Jan 05 15:57:58 -0800 2011
+  Processing by SpillsController#index as HTML
+toxosis_development['spills'].find({}, {})
+Rendered spills/index.html.haml within layouts/application (21.4ms)
+Completed   in 30ms
+
+ActionView::Template::Error (undefined method `facility_name' for #<Spill:0x105aad7e0>):
+    9: 
+    10:   - @spills.each do |spill|
+    11:     %tr
+    12:       %td= spill.facility_name
+    13:       %td= link_to 'Show', spill
+    14:       %td= link_to 'Edit', edit_spill_path(spill)
+    15:       %td= link_to 'Destroy', spill, :confirm => 'Are you sure?', :method => :delete
+  app/views/spills/index.html.haml:12:in `_app_views_spills_index_html_haml___107122081_2195582880_0'
+  app/views/spills/index.html.haml:10:in `_app_views_spills_index_html_haml___107122081_2195582880_0'
+  app/controllers/spills_controller.rb:7:in `index'
+
+Rendered /Users/chris/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/chris/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (119.1ms)
+Rendered /Users/chris/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (125.4ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+toxosis_development['spills'].find({}, {}).limit(-1)
+toxosis_development['spills'].find({}, {}).limit(-1).sort([[:_id, :desc]])
+toxosis_development['spills'].find({}, {}).limit(-1)
+toxosis_development['spills'].find({}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+toxosis_development['spills'].find({}, {}).limit(-1)
+toxosis_development['spills'].find({}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+
+
+Started GET "/spills" for 127.0.0.1 at Wed Jan 05 16:10:47 -0800 2011
+  Processing by SpillsController#index as HTML
+toxosis_development['spills'].find({}, {})
+MONGODB cursor.refresh() for cursor 881419839571841757
+MONGODB cursor.refresh() for cursor 881419839571841757
+MONGODB cursor.refresh() for cursor 881419839571841757
+MONGODB cursor.refresh() for cursor 881419839571841757
+MONGODB cursor.refresh() for cursor 881419839571841757
+MONGODB cursor.refresh() for cursor 881419839571841757
+MONGODB cursor.refresh() for cursor 881419839571841757
+MONGODB cursor.refresh() for cursor 881419839571841757
+Rendered spills/index.html.haml within layouts/application (13442.4ms)
+Completed 200 OK in 13455ms (Views: 13454.4ms)
