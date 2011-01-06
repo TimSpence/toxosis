@@ -1,16 +1,19 @@
-%h1 
+%h3
   Search Results for
   = params['q'] 
 
-%table
-  %tr
-    %th Facility
-    %th Location
-    %th Chemical
+- if ! @results['results'].empty?
+  %table
+    %tr
+      %th Facility
+      %th Location
+      %th Chemical
 
-    - @results['results'].each do |result|
-      - spill = Spill.criteria.id(result['docid']).first
-      %tr
-        %td= link_to spill['Facility Name'], spill
-        %td= "#{spill['City']}, #{spill['ST']}"
-        %td= spill['Chemical']
+      - @results['results'].each do |result|
+        - spill = Spill.criteria.id(result['docid']).first
+        %tr
+          %td= link_to spill['Facility Name'], spill
+          %td= "#{spill['City']}, #{spill['ST']}"
+          %td= spill['Chemical']
+- else
+  %p You're in luck! No spills in your area!

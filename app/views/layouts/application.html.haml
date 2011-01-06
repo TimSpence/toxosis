@@ -14,13 +14,23 @@
       .row
         .column.grid_12
           %h1
-            %a{ :href => '/', :title => "" }
-              Toxosis
+            %a{ :href => '/', :title => "" } Toxosis
+      .row
+        .column.grid_12
+          %h2 Find chemical spills near you
     - flash.each do |key, value|
       .row{ :class => key } 
         .column.grid_12
           = value
     #content
+      .row
+        .column.grid_12
+          %p
+            %form{ :action => '/search', :method => 'get'}
+              %label{ :for => 'q'} Enter your zip code:
+              %input{ :type => 'text', :id => 'q', :name => 'q', :value => params.fetch(:q, '') }
+              %input{ :type => 'submit', :value => 'Search'}
+
       .row
         .column.grid_12
           =yield
@@ -29,4 +39,9 @@
         .column.grid_12
           %hr
           %p
-            &copy; 2011 Toxosis
+            &copy; 2011 Toxosis.
+            Powered by 
+            %a{ :href => 'http://heroku.com' } Heroku
+            and
+            %a{ :href => 'http://indextank.com' } IndexTank          
+            
