@@ -1,7 +1,10 @@
 %h3
-  Search Results for
+  Your search for
   = params['q'] 
-
+  returned
+  = @results['matches'].to_s
+  matches.
+  
 - if ! @results['results'].empty?
   %table
     %tr
@@ -15,5 +18,12 @@
           %td= link_to spill['Facility Name'], spill
           %td= "#{spill['City']}, #{spill['ST']}"
           %td= spill['Chemical']
+  %p
+    - if ! (params['start'].to_i < 11)
+      %a{ :href => "/search?q=#{params['q']}&start=#{(params.fetch('start', 1).to_i-10).to_s}"} < Previous
+
+    - if ((@results['matches'].to_i-10) > params['start'].to_i)
+      %a{ :href => "/search?q=#{params['q']}&start=#{(params.fetch('start', 1).to_i+10).to_s}"} Next >
+    
 - else
   %h2 You're in luck! No spills in your area!
