@@ -1,3 +1,9 @@
+TODO
+====
+* Add an explanation of what this is to application layout
+* Paginate search results
+* Rank search results better
+
 Importing data
 
 run dos2unix to strip \R
